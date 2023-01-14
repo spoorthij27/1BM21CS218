@@ -1,0 +1,18 @@
+struct ListNode* swapNodes(struct ListNode* head,int k){
+struct ListNode* temp=head,*r1=head,*r2=head;
+int c=k,temp1;
+    while(c--)
+    {
+        r1=temp;
+        temp=temp->next;
+    }
+    while(temp!=NULL)
+    {
+        temp=temp->next;
+        r2=r2->next;
+    }
+    temp1=r1->val;
+    r1->val=r2->val;
+    r2->val=temp1;
+    return head;
+}
